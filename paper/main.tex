@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{\textbf{Crisis Echoes or Arbitrage? Selective Co-movement and Integration of the Atlantic Grain Market, 1729--1914}}
+\author{Petr Avtonomov\\
+\small Independent Researcher, St. Petersburg, Russia\\
+\small ORCID: \href{https://orcid.org}{0009-0003-2816-6782}}
+\date{November 2026}
+
+\begin{document}
+\sloppy
+
+\maketitle
+
+\begin{abstract}
+When did the Atlantic economy become an integrated marketplace, and what mechanisms bound distant food markets together before the steam age? While classic cliometric scholarship dates transatlantic commodity integration to the mid-nineteenth-century revolution in steamships, railways, and telegraphy, revisionist studies have argued that substantial market integration already existed across eighteenth-century Atlantic ports. Using high-density price chronicles from the Allen--Unger Global Commodity Prices Database (\texttt{doi:10.34894/IPVXMW}), this study distinguishes long-run price convergence from short-run shock transmission and cross-market co-movement across European, North American, and Pacific hubs between 1729 and 1914. Strict archival pre-auditing excludes multi-year wartime disruptions without synthetic interpolation, yielding clean panels across the pre-steam era (1729--1789, $N=44$; 1752--1855, $N=21$; and 1791--1855, $N=27$) and the First Globalization (1850--1914, $N=19$). Before 1850, European grain co-movement was anchored in a Baltic--North Sea--Channel maritime belt and activated episodically during acute climatic and military emergencies: removing just seven crisis transition years reduces shared Mode~1 variance from $23.7$ to $19.2$ percent and contracts cross-sectional participation from $0.513$ to $0.448$. Meanwhile, colonial luxuries, municipally regulated urban markets (such as Nancy), and North American series ($1.83$ percent across six series versus a $22.22$ percent proportional benchmark) remained decoupled. After 1850, North American participation rose to $13.87$ percent in silver parity ($12.37$ percent in gold-standard nominal prices), driven selectively by processed American flour (Vermont flour, $9.70$ percent versus a $5.26$ percent single-series benchmark), which exhibits strong contemporaneous annual co-movement with English ($r = 0.602$), Polish ($r = 0.474$), and French ($r = 0.435$) wheat despite failing standard level-based cointegration tests.
+\end{abstract}
+
+\section{Introduction: Co-movement, Shock Transmission, and Arbitrage}
+A central debate in modern economic history concerns when and how the Atlantic basin coalesced into a single commodity market. In their landmark synthesis on the First Globalization, O'Rourke and Williamson \cite{orourke1999,orourke2002} argued that transoceanic price convergence began in earnest only after 1850, propelled by the repeal of the British Corn Laws (1846), interior railway construction, falling steamship freight rates, and submarine telegraphy. Against this canonical view, a wave of revisionist scholarship---notably by Sharp and Weisdorf \cite{sharp2013}, Dobado-Gonz\'alez et al.\ \cite{dobado2012}, and Federico \cite{federico2011}---has contended that significant grain and provision market integration was already underway across Atlantic and European ports during the eighteenth-century age of sail, interrupted periodically by wars and mercantilist trade restrictions.
+
+Much of this disagreement stems from conflating distinct empirical dimensions of market integration \cite{federico2012}. Economic history distinguishes between long-run \textit{price convergence} (the narrowing of spatial price spreads as transport costs decline), \textit{short-run shock transmission} (the rapid propagation of annual supply and demand disturbances across markets), and \textit{general co-movement} (which can arise from common monetary or climatic shocks even without bilateral trade). When researchers evaluate price levels directly over long horizons, shared monetary waves---such as eighteenth-century bullion inflows or Napoleonic wartime inflation---generate strong statistical correlation even when physical arbitrage is minimal. Conversely, bridging multi-year wartime gaps in early American price chronicles through linear interpolation can manufacture artificial co-movement across decades when trade was physically blockaded.
+
+To test whether eighteenth-century markets were linked by routine arbitrage or merely jarred by common catastrophes, this study isolates short-run annual price changes ($\Delta \ln X_t$) across rigorously audited series from the Allen--Unger Global Commodity Prices Database \cite{allenunger2026}. By comparing each region's share of shared annual variance against its exact proportional benchmark ($k/N$ for a group of $k$ series in an $N$-series panel), testing non-crisis subsamples, and evaluating lead--lag dynamics, we track both the timing and commodity-level selectivity of Atlantic integration from 1729 to 1914.
+
+\section{Archival Sources and Data Pre-Auditing}
+The empirical analysis draws on the consolidated Allen--Unger database \cite{allenunger2026}, which records annual commodity prices in original local currencies and measures (Original Value) alongside standardized silver equivalents in grams of silver per litre or kilogram (Standardized Value). Across 1700--1860, the repository contains 590 active series, while 1850--1914 covers dozens of trading centers across Europe, North America, and Australia.
+
+Because archival gaps and unit changes can distort cross-market comparisons, every candidate series underwent three pre-audit filters before analysis:
+\begin{enumerate}
+    \item \textbf{Archival Continuity:} At least $85$ percent annual coverage within the target period, with no internal gap exceeding two years ($\text{MaxGap} \le 2$ years) and no leading or trailing gaps exceeding two years. Isolated single- or two-year gaps were filled linearly; series with multi-year disruptions were excluded rather than reconstructed.
+    \item \textbf{Metrological Invariance and Deduplication:} Series documenting changes in physical units of volume or weight within the observation window (such as Arnhem rye over 1700--1860) or duplicate archival aliases (such as Danzig alongside Gdansk, or secondary Milanese series) were flagged and excluded from the core benchmarks.
+    \item \textbf{Dual Monetary Basis:} All panels were evaluated in both silver parity (Standardized Value) and local nominal currency (Original Value) to ensure that monetary regime shifts---such as the post-1873 transition to the international gold standard---do not drive structural findings.
+\end{enumerate}
+
+This archival audit reveals a sharp structural boundary in North American historical statistics. Between 1752 and 1855, colonial and early national series for Maryland and Massachusetts contain multi-year gaps ($\text{MaxGap}$ of $5$ to $23$ years) spanning the American Revolutionary War (1775--1783) and the War of 1812, while West Virginia records begin only in 1788--1791. By contrast, European hubs provide $21$ series continuous after minimal (1--2 year) interpolation over 1752--1855 ($T = 104$ years, $95$ to $100$ percent raw coverage), and $44$ unique European wheat and rye chronicles over the pre-revolutionary Ancien R\'egime window 1729--1789 ($T = 61$ years, $91.8$ to $100$ percent coverage). After 1850, continuous annual records emerge for Vermont ($100$ percent coverage, $\text{MaxGap} = 0$ over 1850--1914), alongside Sydney, Warsaw, Tours, England, and Arnhem. We construct four primary panels plus homogeneous grain-only control subsets:
+\begin{itemize}
+    \item \textbf{Panel 1A (Ancien R\'egime European Grain Network, 1729--1789, $N=44$):} Unique European wheat and rye series spanning the Baltic, North Sea, Channel, France, Germany, Italy, and Spain prior to the French Revolution.
+    \item \textbf{Panel 1B (European Core and Colonial Imports, 1752--1855, $N=21$):} Cereals, wine, olive oil, and colonial imports across England, Portugal, the Low Countries, France, and Italy.
+    \item \textbf{Panel 2 (Post-Revolutionary Transatlantic Panel, 1791--1855, $N=27$):} Panel 1B augmented with six post-1791 North American series (West Virginia maize, coffee, whiskey, butter, tea, and Massachusetts potatoes, permitting isolated gaps up to four years).
+    \item \textbf{Panel 3 (First Globalization Tri-Continental Panel, 1850--1914, $N=19$):} Tradable grains, flour, and provisions across Europe (England, Warsaw, Tours, Arnhem), North America (Vermont), and Australia (Sydney) with $98.5$ to $100$ percent coverage.
+\end{itemize}
+
+\section{The Pre-Steam Era (1729--1855): Crisis Echoes and Institutional Boundaries}
+Evaluating Panel 1B over 1752--1855 explains why studies based on price levels often overstate eighteenth-century market integration. In raw silver levels, a single dominant trend accounts for $57.3$ percent of total variance and spans nearly the entire cross-section ($\mathrm{PR}(v_1) = 0.910$, $95$ percent bootstrap CI: $0.892$ to $0.924$). Once secular inflation and monetary trends are removed via annual logarithmic differences ($\Delta \ln X_t$), however, the leading common component drops to $23.7$ percent of variance and cross-sectional participation contracts to $\mathrm{PR}(v_1) = 0.513$ ($0.464$ to $0.554$). Rather than a unified oceanic marketplace, the pre-steam economy operated through four distinct historical mechanisms (Figure~\ref{fig:presteam} and Figure~\ref{fig:europe18c}).
+
+\subsection{Crisis-Driven Synchronization vs. Quiet-Year Fragmentation}
+In a market integrated by continuous bilateral arbitrage, cross-regional co-movement persists across normal harvest years. Instead, low temporal participation in annual price changes ($\mathrm{PR}(u_1) = 0.276$, $0.236$ to $0.311$) shows that European grain synchronization switched on impulsively during acute climatic and geopolitical shocks (Figure~\ref{fig:presteam}A). Nearly half of the century's shared price variance is concentrated in four crisis episodes: the post-Tambora harvest failure and subsequent deflation of 1817--1818 ($8.01$ percent of Mode~1 temporal energy) and 1818--1819 ($4.06$ percent), the Wars of the Second Coalition in 1799--1800 ($7.84$ percent) and 1801--1802 ($7.20$ percent), Napoleon's Continental Blockade in 1809--1810 ($4.84$ percent) and 1812--1813 ($2.98$ percent), and the European potato and grain crisis of 1847--1848 ($4.36$ percent).
+A direct non-crisis subsample test confirms this mechanism: excluding just these seven crisis transition years ($M = 96$ quiet transitions) causes Mode~1 explained variance to fall from $23.7$ to $19.2$ percent and contracts cross-sectional participation $\mathrm{PR}(v_1)$ from $0.513$ to $0.448$ (while temporal $\mathrm{PR}(u_1)$ rises from $0.276$ to $0.362$ as discrete crisis spikes are removed). During peaceful, normal-weather years, high overland and coastal transport costs left regional harvest fluctuations largely localized.
+\subsection{Segregation of Grain and Colonial Trade, and the Nancy Anomaly}
+Decomposing series contributions ($v_{j1}^2$) to the leading annual rhythm over 1752--1855 (Figure~\ref{fig:presteam}B) reveals that $95.23$ percent of the shared European dynamic was confined to twelve staple cereal series: English flour ($12.63$ percent), English wheat ($12.34$ percent), Milanese wheat ($11.25$ percent), Milanese rye ($10.91$ percent), Milanese rice ($9.56$ percent), English barley ($8.75$ percent), Strasbourg wheat ($6.96$ percent), Arnhem wheat ($6.37$ percent), Tuscan wheat ($4.46$ percent), Southern English wheat ($4.45$ percent), Porto wheat ($4.21$ percent), and Lisbon barley ($3.34$ percent).
+Overseas colonial imports traded in London---tea ($0.02$ percent), pepper ($0.08$ percent), sugar ($0.38$ percent), and tobacco ($1.50$ percent)---moved orthogonally to continental grain markets, as did Portuguese wine ($0.17$ percent) and olive oil ($0.33$ percent). High sailing freight costs allowed high-value luxuries to cross the Atlantic without integrating colonial commerce into domestic staple food systems. Equally striking is a regional institutional divergence inside eastern France: whereas Strasbourg wheat carried a $6.96$ percent weight in the European cereal core over 1752--1855 (well above the $1/21 = 4.76$ percent single-series benchmark), neighboring Nancy wheat ($0.42$ percent) and rye ($0.45$ percent) remained almost completely detached, reflecting post-1789 institutional divergence as Strasbourg integrated into commercial Rhine--Alsace grain flows while municipal bread price regulation (\textit{taxe du pain}) and hospital procurement continued to damp short-run volatility in Nancy \cite{persson1999}.
+\subsection{Structural Isolation of North America (1791--1855)}
+In Panel 2 ($N=27$), adding six North American series over 1791--1855 provides a direct test against revisionist claims of early transatlantic integration (Figure~\ref{fig:presteam}D). Under a proportional benchmark where all series contribute equally, six series would account for $6/27 = 22.22$ percent of shared variance. In reality, all six US series combined contribute just $1.83$ percent---more than twelve times below their proportional share. Restricting the comparison to a homogeneous staple-food subset ($N=15$ cereals and potatoes over 1791--1855) yields the same result: North America accounts for only $0.92$ percent against a $2/15 = 13.33$ percent proportional benchmark. Interior geographic barriers (such as West Virginia prior to trans-Appalachian railways) and British Corn Law tariffs (1815--1846) prevented North American food prices from co-moving with European markets.
+\subsection{Mapping the Ancien Régime Divide: Maritime Core vs. Regulated Interior (1729--1789)}
+To map the exact institutional and geographic boundary between commercial and regulated markets prior to the French Revolution, Panel 1A audits all $N=44$ unique European wheat and rye chronicles over 1729--1789 ($T = 61$ years). Annual logarithmic differences ($\Delta \ln X_t$) confirm the same episodic crisis synchronization ($\mathrm{Var}_1 = 22.0$ percent, $\mathrm{PR}(u_1) = 0.240$, $\mathrm{PR}(v_1) = 0.498$, with no internal Laplacian break, $p = 0.177$), while exposing a stark spatial hierarchy across Ancien Régime Europe (Figure~\ref{fig:europe18c}).
+The commercial grain core of the eighteenth century was strictly confined to the Baltic--North Sea--Channel maritime belt, where waterborne bulk transport enabled rapid price transmission: England ($6.9$ percent of Mode~1 energy, triple the $1/44 = 2.27$ percent single-series benchmark), Konigsberg ($6.5$ percent), Poland ($6.3$ percent), northern French Flanders at Douai ($5.9$ percent), Gdansk ($5.2$ percent), and Amsterdam ($5.1$ percent). By contrast, interior continental cities and heavily regulated urban markets were structurally decoupled from this maritime rhythm: both Nancy ($0.2$ percent) and Strasbourg ($0.3$ percent) in eastern France, alongside Frankfurt ($0.8$ percent), Leipzig ($0.2$ percent), Naples ($0.2$ percent), and Valencia ($0.1$ percent), registered less than one-third of their proportional share. Comparing the 1729--1789 and 1752--1855 panels thus uncovers a crucial historical trajectory: whereas Strasbourg joined the European grain core once internal French customs barriers were dismantled after 1789, municipally regulated Nancy remained isolated well into the nineteenth century.
+\begin{figure}
+\centering
+\resizebox{\textwidth}{0.66\textwidth}{\includegraphics{Figure_1.png}}
+\caption{Pre-Steam Atlantic and European Price Dynamics (1752--1855). Panel A: Temporal concentration of shared price variation, peaking during acute subsistence and wartime crises (1800, 1810, 1818, and 1848). Panel B: Cross-sectional squared loadings showing the European cereal core (95.23 percent) versus decoupled colonial imports and Nancy grains. Panel C: Second-echelon Fiedler vector on the k-NN transition graph (k=8), confirming no irreversible internal break (p=0.14). Panel D: Partition of Mode 1 energy over 1791--1855 (N=27) against proportional benchmarks (k/N), showing North American isolation (1.83 percent vs. 22.22 percent).}
+\label{fig:presteam}
+\end{figure}
+\begin{figure}
+\centering
+\resizebox{\textwidth}{0.50\textwidth}{\includegraphics{Figure_2.png}}
+\caption{Ancien Régime European Grain Geography (1729--1789, N=44). Panel A: Spatial distribution of Mode 1 energy shares, contrasting the Baltic--North Sea--Channel maritime core against intermediate French and Italian markets and the decoupled inland/regulated periphery. Panel B: Gradient across French and continental markets from coastal Flanders (Douai, 5.9 percent) to interior and municipally regulated cities (Strasbourg and Nancy).}
+\label{fig:europe18c}
+\end{figure}
+\begin{table}
+\centering
+\caption{Summary of Market Synchronization Across Eras and Monetary Bases}
+\label{tab:summary}
+\footnotesize
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Era and Panel} & \textbf{Basis} & \textbf{Mode 1 (pct.)} & $\mathrm{PR}(u_1)$ & $\mathrm{PR}(v_1)$ & \textbf{Key Regional Share (pct.)} & \textbf{Split ($p$)} \tabularnewline
+\midrule
+1729--1789 ($N=44$) & Silver & 22.0 & 0.240 & 0.498 & Maritime Core: 5.1--6.9 & 1745 ($p=0.177$) \tabularnewline
+1752--1855 ($N=21$) & Silver & 23.7 & 0.276 & 0.513 & Quiet yrs: 19.2; Nancy: 0.42 & 1801 ($p=0.141$) \tabularnewline
+1791--1855 ($N=27$) & Silver & 21.0 & 0.276 & 0.461 & N. America: 1.83 (vs. 22.22) & 1836 ($p=0.421$) \tabularnewline
+1850--1914 ($N=19$) & Silver & 24.3 & 0.273 & 0.374 & N. America: 13.87 (Flour: 9.70) & 1868 ($p=0.280$) \tabularnewline
+1850--1914 ($N=19$) & Nominal & 25.5 & 0.229 & 0.433 & N. America: 12.37 & 1869 ($p=0.172$) \tabularnewline
+\bottomrule
+\end{tabular}
+\end{table}
+\section{The Steam and Telegraph Watershed (1850--1914): Selective Co-movement}
+Applying the same diagnostic to Panel 3 ($N=19$, 1850--1914) reveals how transatlantic market linkages actually emerged after mid-century (Table~\ref{tab:summary} and Figure~\ref{fig:globalization}). While raw level co-movement appears lower than before 1850 ($\mathrm{PR}(v_1) = 0.667$ in silver and $0.781$ in nominal prices; Figure~\ref{fig:globalization}A) because Panel 3 incorporates five decoupled Australian series in Sydney alongside diverse non-grain provisions, annual growth-rate analysis uncovers a decisive structural shift. North American participation in the leading global price rhythm rose from under $2$ percent in Panel 2 ($1.83$ percent across six series) to nearly $14$ percent in Panel 3 ($13.87$ percent across seven Vermont series in silver parity; $12.37$ percent in gold-standard nominal prices). In a homogeneous nine-series grain-only panel over 1850--1914 ($\mathrm{Var}_1 = 49.1$ percent, $\mathrm{PR}(v_1) = 0.696$), North America accounts for $8.45$ percent ($7.94$ percent from Vermont flour alone)---a ninefold increase over the $0.92$ percent pre-steam grain benchmark.
+Crucially, late nineteenth-century integration was highly selective across commodities, ocean basins, and statistical estimators:
+\begin{itemize}
+\item \textbf{Processed Flour and Contemporaneous Shock Transmission:} Although all seven Vermont series combined ($13.87$ percent) remain below their aggregate proportional share ($7/19 = 36.84$ percent) because colonial beverages in Vermont (coffee, $0.93$ percent; tea, $0.00$ percent) stayed peripheral, almost the entire North American signal is concentrated in Vermont flour ($9.70$ percent, nearly double its single-series proportional benchmark of $1/19 = 5.26$ percent; Figure~\ref{fig:globalization}B--C). Lead--lag correlation analysis of annual log-differences confirms that transatlantic shock transmission operated contemporaneously ($\tau = 0$) rather than with a multi-year delay: Vermont flour growth rates correlate strongly with English wheat ($r = +0.602$), Warsaw wheat ($r = +0.474$), and Tours wheat ($r = +0.435$) within the same calendar year, with positive predictive flow from North American supply to Europe ($r_{\text{VT}\to\text{EU}} = +0.231$ to $+0.268$ at a one-year lead versus $+0.061$ to $+0.210$ in reverse). Interestingly, standard Engle--Granger cointegration tests \cite{engle1987} on log price levels fail to reject the null of no cointegration ($p = 0.583$ for England, $0.364$ for Warsaw, and $0.164$ for Tours) due to secular shifts in ocean freight rates and post-1873 monetary regimes, illustrating why growth-rate spectral auditing detects active transatlantic co-movement where level-based tests remain inconclusive.
+\item \textbf{The Pacific Perishable Barrier:} In sharp contrast to North Atlantic flour, the five Australian series in Sydney (tea $1.76$ percent, butter $1.10$ percent, cheese $0.47$ percent, potatoes $0.36$ percent, sugar $0.13$ percent) account for only $3.82$ percent combined against a $5/19 = 26.32$ percent proportional benchmark. Before widespread refrigerated steamships, Pacific distance kept perishable antipodean provisions decoupled from the North Atlantic grain core \cite{jacks2011}.
+\item \textbf{Monetary Invariance and Boundary Transition:} Switching from silver parity to local nominal currencies increases level-based co-movement due to shared deflation under the post-1873 gold standard, but leaves annual growth-rate co-movement virtually unchanged ($13.87$ percent vs.\ $12.37$ percent). Moreover, spectral clustering on annual transitions detects no statistically significant internal break within either 1752--1855 ($p=0.141$; Figure~\ref{fig:presteam}C) or 1850--1914 ($p=0.280$; Figure~\ref{fig:globalization}D), which is consistent with transatlantic grain integration occurring as a structural shift at the mid-century watershed rather than an abrupt shock inside the late nineteenth century.
+\end{itemize}
+\begin{figure}
+\centering
+\resizebox{\textwidth}{0.66\textwidth}{\includegraphics{Figure_3.png}}
+\caption{Selective Emergence of the Transatlantic Grain Market (1752--1914). Panel A: Operator sensitivity contrasting level-based participation against annual growth-rate co-movement. Panel B: North American Mode 1 share against proportional benchmarks (k/N), showing selective integration through Vermont flour (9.70 percent vs. 5.26 percent single-series benchmark). Panel C: Leading series contributions over 1850--1914, showing Vermont flour co-moving with European cereals while Sydney provisions remain decoupled. Panel D: Fiedler eigenvector over 1850--1914 (p=0.28), indicating stationary post-integration dynamics.}
+\label{fig:globalization}
+\end{figure}
+\section{Conclusion}
+Distinguishing long-run price convergence from short-run shock transmission resolves a persistent tension in Atlantic economic history. Revisionist studies finding early eighteenth-century integration capture either narrow luxury trades, common monetary waves, or the Baltic--North Sea maritime belt, whereas interior staple food markets remained governed by local harvests and municipal institutions---exemplified by the decoupling of Ancien Régime Nancy, Strasbourg, and Leipzig, and the persistent regulation of Nancy into the nineteenth century. Before 1850, European grain prices synchronized only episodically during major wars and climatic catastrophes (falling sharply when just seven crisis years are removed), while North American markets were structurally isolated ($1.83$ percent vs.\ $22.22$ percent proportional benchmark). Only in the second half of the nineteenth century did railways, steamships, and telegraphy weld North American flour ($9.70$ percent; contemporaneous correlation $r = 0.602$ with English wheat) into the European cereal system, demonstrating that the First Globalization began not as a uniform wave across all goods, but as a selective bridge built on processed, transportable grain.
+\appendix
+\section{Methodological Protocol and Reproducibility}
+To separate secular trend illusions from genuine cross-market co-movement without parametric cointegration assumptions, each panel $X \in \mathbb{R}^{T \times N}$ is evaluated in both levels and logarithmic first differences $Y_t = \ln X_t - \ln X_{t-1}$ ($M = T - 1$ transitions), standardized column-wise to zero mean and unit variance ($Z$).
+\begin{enumerate}
+\item \textbf{First-Echelon Singular Value Decomposition:} Performing $Z = U \Sigma V^\top$, the normalized Participation Ratios of the leading temporal score $u_1$ and cross-sectional loading $v_1$ are defined on the interval from $1/K$ to $1$ as \cite{avtonomov2026a}
+\begin{equation*}
+\widetilde{\text{PR}}(u_1) = \frac{\left(\sum_{t=1}^{M} u_{t1}^4\right)^{-1} - 1}{M - 1}, \qquad
+\widetilde{\text{PR}}(v_1) = \frac{\left(\sum_{j=1}^{N} v_{j1}^4\right)^{-1} - 1}{N - 1},
+\end{equation*}
+with $95$ percent confidence intervals estimated via $300$ bootstrap subsamples ($80$ percent of time rows drawn without replacement) and individual series contributions measured by squared loadings $v_{j1}^2$ ($\sum_{j=1}^N v_{j1}^2 = 1$).
+\item \textbf{Second-Echelon Spectral Transition Graph:} Annual transition vectors $z_t \in \mathbb{R}^N$ are embedded in a symmetric $k$-nearest-neighbor graph ($k=8$, verified for sensitivity across $k \in {6, 8, 10}$) weighted by a Gaussian kernel $W_{ij} = \exp(-|z_i - z_j|2^2 / 2\sigma{\text{med}}^2)$, where $\sigma_{\text{med}}$ is the median pairwise Euclidean distance. The Fiedler eigenvector $\psi_2$ of the normalized Laplacian $L_{\text{sym}} = I - D^{-1/2} W D^{-1/2}$ is scanned across all candidate split points $\tau$ using a two-sided Mann--Whitney $U$ test \cite{avtonomov2026b}, and cross-sectional stability is verified via Leave-One-Out (LOO) column perturbation.
+\item \textbf{Code and Data Availability:} All pre-audit scripts, panel builders, and figure generators are archived at \url{github.com/avtonomov-petr/atlantic-grain-integration} and build directly on the First- and Second-Echelon protocols (\texttt{doi:10.5281/zenodo.24322572}; \texttt{doi:10.5281/zenodo.24332448}).
+\end{enumerate}
+\begin{thebibliography}{99}
+\bibitem{allenunger2026}
+Allen, R. C., and Unger, R. W. (2026). \textit{The Allen Unger Commodities Dataset} (Version 1.0). DataverseNL. \texttt{doi:10.34894/IPVXMW}.
+\bibitem{avtonomov2026a}
+Avtonomov, P. (2026). \textit{Spectral Auditing of High-Dimensional Data: Manifesto v2.1}. Zenodo. \texttt{doi:10.5281/zenodo.24322572}.
+\bibitem{avtonomov2026b}
+Avtonomov, P. (2026). \textit{Beyond the First Echelon: Spectral Transition Graphs for Regime Detection v2.1}. Zenodo. \texttt{doi:10.5281/zenodo.24332448}.
+\bibitem{dobado2012}
+Dobado-González, R., García-Hiernaux, A., and Guerrero, D. E. (2012). The integration of grain markets in the eighteenth century: Early rise of globalization in the West. \textit{Journal of Economic History}, 72(3), 671--707.
+\bibitem{engle1987}
+Engle, R. F., and Granger, C. W. J. (1987). Co-integration and error correction: Representation, estimation, and testing. \textit{Econometrica}, 55(2), 251--276.
+\bibitem{federico2011}
+Federico, G. (2011). When did European markets integrate? \textit{European Review of Economic History}, 15(1), 93--126.
+\bibitem{federico2012}
+Federico, G. (2012). How much do we know about market integration in Europe? \textit{Economic History Review}, 65(2), 470--497.
+\bibitem{jacks2011}
+Jacks, D. S., Meissner, C. M., and Novy, D. (2011). Trade booms, trade busts, and trade costs. \textit{Journal of International Economics}, 83(2), 185--201.
+\bibitem{orourke1999}
+O'Rourke, K. H., and Williamson, J. G. (1999). \textit{Globalization and History: The Evolution of a Nineteenth-Century Atlantic Economy}. MIT Press.
+\bibitem{orourke2002}
+O'Rourke, K. H., and Williamson, J. G. (2002). When did globalisation begin? \textit{European Review of Economic History}, 6(1), 23--50.
+\bibitem{persson1999}
+Persson, K. G. (1999). \textit{Grain Markets in Europe, 1500--1900: Integration and Deregulation}. Cambridge University Press.
+\bibitem{sharp2013}
+Sharp, P., and Weisdorf, J. (2013). Globalization revisited: Market integration and the wheat trade between North America and Britain from the eighteenth century. \textit{Explorations in Economic History}, 50(1), 88--98.
+\end{thebibliography}
+\end{document}
